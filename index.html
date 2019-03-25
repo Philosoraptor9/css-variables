@@ -6,7 +6,7 @@
 </head>
 
 <body>
-    <h2>Update CSS Variables with<span class="hl">JS</span></h2>
+    <h2>Update CSS Variables with <span class="h1">JS</span></h2>
 
     <div class="controls">
         <label for="spacing">Spacing:</label>
@@ -22,6 +22,24 @@
     <img src="https://source.unsplash.com/7bwQXzbF6KE/800x500">
 
     <style>
+
+        :root {
+            --base: #ffc600;
+            --spacing: 10px;
+            --blur: 10px;
+        }
+
+        img {
+            padding: var(--spacing);
+            background: var(--base);
+            filter: blur(var(--blur));
+        }
+
+        .h1 {
+            color: var(--base);
+        }
+        /* Miscellaneous styles, nothing do do w/ css variables */
+
         body {
             text-align: center;
             background: #193549;
@@ -41,6 +59,8 @@
     </style>
 
     <script>
+        const inputs = document.querySelectorAll('.controls input');
+
     </script>
 
 </body>
